@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="./script.js"></script>
+   <script src="view/multiple-sort.directive.js"></script>
+   <!-- <link rel = "stylesheet" type = "text/css" href = "style.css" /> -->
+</head>
+<body ng-app='myModule' >
+    <div ng-controller='myController'> 
+    <div style="float: right;">
+            <button  style="float: left;" ng-click="MultipleSort_Popup()"
+            type="button" data-toggle="modal" data-target="#sortModal_table"  title="Multiple Sort">
+            Multicolumn sort
+            </button>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>   name    </th>
+            <th>   Lastname </th>
+            <th>   gender   </th>
+            <th>   salary   </th>
+            <th>   DOB      </th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="emp in employees|orderBy:chosen_multisort">
+                <td>{{emp.name}}</td>
+                <td>{{emp.lastname}}</td>
+                <td>{{emp.gender}}</td>
+                <td >{{emp.salary}}</td>
+                <td>{{emp.dob|date:"dd/MM/yyyy"}}</td>
+            </tr>
+        </tbody>
+    </table>
+   <br>   <br>
+   <br>
+   <br>
+
+    <div ng-show="modalOpen" ng-include="'view/multiple-sort.html'"></div>
+ </div> 
+
+</body>
+</html>

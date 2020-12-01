@@ -1,0 +1,113 @@
+
+<div> 
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="modal-title">Sort Column</div>
+      <div
+        type="button"
+        ng-click="modalclose()"
+        class="close_bar"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">×</span>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <div class="feature-button">
+        <button
+          id="add"
+          type="button"
+          ng-disabled="add_sort_button"
+          ng-click="addRow()"
+        >
+          <i class="fa fa-plus"></i> Add Sort</button
+        >&nbsp;
+        <button
+          id="delete"
+          type="button"
+          ng-disabled="delete_sort_button"
+          ng-click="deleteRow()"
+        >
+          <i class="fa fa-minus"></i>Delete Sort
+        </button>
+      </div>
+      <div class="modal-table">
+      <table class="module-row" class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th><div class="th-inner">Column</div></th>
+            <th><div class="th-inner">Order</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td>SortBy</td>
+            <td>
+              <select
+                ng-init="elements[-1].col = data[0]"
+                class="dropdown"
+                ng-model="elements[-1].col"
+                ng-change="onsortBychange(elements[-1].col,-1)"
+                ng-options="option for option in data"
+              ></select>
+            
+            </td>
+            <td>
+              <select class="dropdown" ng-model="elements[-1].order" >
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+              </select>
+            </td>
+            <!-- <td><i class="fa fa-trash"></i></td> -->
+          </tr>
+          <tr ng-repeat="element in elements">
+            <td>ThenBy</td>
+            <td>
+              <select
+                ng-init="element.col = element.values[0]"
+                class="dropdown"
+                ng-change="onsortBychange(element.col,$index)"
+                ng-model="element.col"
+                ng-options="option for option in element.values"
+              ></select>
+            </td>
+            <td>
+              <select class="dropdown"  ng-model="element.order"
+              >
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+              </select>
+            </td>
+            <td><i class="fa fa-trash" ng-click="delete_particularcol(element.col,$index)"></i></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <br />
+    <div class="modal-footer">
+      <button
+        class="gs-minus-header ng-scope"
+        type="button"
+        class="btn btn-secondary"
+        ng-click="modalclose()"
+        data-dismiss="modal"
+      >
+        Cancel</button
+      >&nbsp;
+      <button
+        class="gs-minus-header"
+        type="button"
+        class="btn btn-primary"
+        ng-click="onclickSort()"
+        aria-disabled="false"
+        style="background-color: lightskyblue;"
+      >
+        Sort
+      </button>
+    </div>
+  </div>
+</div>
