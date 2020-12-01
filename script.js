@@ -20,33 +20,7 @@ app.controller("myController", ($scope) => {
         $scope.MultipleSort_Popup = function () {
             $scope.modalOpen=!$scope.modalOpen;
         }
-        //     modalOpen=true;
-        //     console.log("nmb"+modalOpen);
-        //     $scope.multiplesort = multiplesort;
-            
-           
-
-        //     // $mdDialog
-        //     //   .show({
-        //     //     template:
-        //     //       "<multiple-sort received-data='multiplesort'></multiple-sort>",
-        //     //     clickOutsideToClose: true,
-        //     //     escapeToClose: true,
-        //     //     scope: $scope,
-        //     //     preserveScope: true,
-        //     //   })
-        //     //   .then((data) => {
-        //     //     console.log(JSON.stringify(data));
-        //     //     $scope.chosen_multisort=[];
-        //     //     for(let i=0;i<data.length;i++){
-        //     //     if(data[i].order==="asc")
-        //     //     $scope.chosen_multisort.push('+'+data[i].col);
-        //     //     else  if(data[i].order==="desc")
-        //     //     $scope.chosen_multisort.push('-'+data[i].col);
-        //     //     }
-        //     //     console.log(JSON.stringify($scope.chosen_multisort));
-        //     //   });
-        // }
+       
     
         $scope.receivedData=multiplesort;
         $scope.sortColumn=[]
