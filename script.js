@@ -1,11 +1,14 @@
 let app = angular.module("myModule",[]);
 var employees=[
     {name:"shivani", lastname:"yadav", gender:0,salary:"15000",dob:new Date("may 16,1900")},
-    {name:"ekta", lastname:"gupta", gender:0,salary:"15000",dob:new Date("may 16,1908")},
-    {name:"laxmi", lastname:"verma", gender:0,salary:"18000",dob:new Date("may 16,1930")},
-    {name:"anand", lastname:"mishra", gender:1,salary:"15000",dob:new Date("may 16,1909")},
-    {name:"himanshu", lastname:"nigam", gender:2,salary:"100000",dob:new Date("may 16,1990")},
-    {name:"mohammad", lastname:"shrafraj", gender:1,salary:"70000",dob:new Date("may 16,1999")},
+    {name:"ayush", lastname:"gaur", gender:0,salary:"18000",dob:new Date("may 16,1930")},
+    {name:"ayush", lastname:"gaur", gender:2,salary:"180000",dob:new Date("may 16,1930")},
+    {name:"mansi", lastname:"thakur", gender:1,salary:"25000",dob:new Date("may 16,1909")},
+    {name:"mansi", lastname:"thakur", gender:1,salary:"250000",dob:new Date("may 16,1909")},
+    {name:"deepanshi", lastname:"singh", gender:1,salary:"150000",dob:new Date("may 16,1991")},
+    {name:"deepanshi", lastname:"singh", gender:1,salary:"1500",dob:new Date("may 16,1991")},
+    {name:"manoj", lastname:"kaushik", gender:2,salary:"100000",dob:new Date("may 16,1999")},
+    {name:"manoj", lastname:"kaushik", gender:0,salary:"1000",dob:new Date("may 6,2000")},
     {name:"shivani", lastname:"yadav", gender:1,salary:"1500",dob:new Date("may 16,1903")},
 ]; 
 var multiplesort = ['name','lastname','gender','salary','dob'];
