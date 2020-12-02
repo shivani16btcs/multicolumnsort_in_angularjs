@@ -147,29 +147,23 @@ app.controller("myController", ($scope) => {
               order: $scope.elements[i - 1].order,
             };
           }
-          console.log("clode the dialog box");
           $scope.modalOpen=false;
           console.log(JSON.stringify($scope.result));
           $scope.chosen_multisort=[];
                   for(let i=0;i<$scope.result.length;i++){
                   if($scope.result[i].order==="asc")
                   $scope.chosen_multisort.push('+'+$scope.result[i].col);
-                  else  if(d3ata[i].order==="desc")
+                  else  if($scope.result[i].order==="desc")
                   $scope.chosen_multisort.push('-'+$scope.result[i].col);
                   }
                   console.log(JSON.stringify($scope.chosen_multisort));
 
-
-
-        //   $mdDialog.hide($scope.result);
         };
   
         // ------------------------
   
         $scope.modalclose = function () {
-            console.log("clode the dialog box");
             $scope.modalOpen=false;
 
-         // $mdDialog.hide();
         };
     })
