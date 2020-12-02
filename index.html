@@ -13,11 +13,10 @@
     
     <div >
     <center>
-        <button  ng-click="MultipleSort_Popup()">
+        <button  class="close_bar" ng-click="MultipleSort_Popup()">
             Multicolumn sort
             </button>
     </center>
-    <div ng-show="modalOpen" ng-include="'view/multiple-sort.html'"></div>        
     </div>
     <table>
         <thead>
@@ -40,7 +39,8 @@
    <br>   <br>
    <br>
    <br>
-       
+   <div ng-show="modalOpen" ng-include="'view/multiple-sort.html'"></div>        
+    
    
  </div> 
 
