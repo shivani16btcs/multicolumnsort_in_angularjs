@@ -22,21 +22,19 @@
     </div>
     <table>
         <thead>
-        <tr>
-            <th>   name    </th>
-            <th>   Lastname </th>
-            <th>   gender   </th>
-            <th>   salary   </th>
-            <th>   DOB      </th>
-        </tr>
+        <tr >
+            <div >
+                <th ng-repeat="col in multiplesort">  {{col}}  </th> 
+            </div>
+        </tr>  
         </thead>
         <tbody>
             <tr ng-repeat="emp in employees|orderBy:chosen_multisort">
                 <td>{{emp.name}}</td>
-                <td>{{emp.lastname}}</td>
-                <td>{{emp.gender}}</td>
-                <td >{{emp.salary}}</td>
-                <td>{{emp.dob|date:"dd/MM/yyyy"}}</td>
+                <td>{{emp.category}}</td>
+                <td>{{emp.salary}}</td>
+                <td >{{emp.Age}}</td>
+                <td>{{emp.weight}}</td>
             </tr>
         </tbody>
     </table>
