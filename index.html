@@ -6,7 +6,7 @@
     <title>Document</title>    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="./script.js"></script>
-   <!-- <link rel = "stylesheet" type = "text/css" href = "style.css" /> -->
+   <link rel = "stylesheet" type = "text/css" href = "style.css" />
 </head>
 <body ng-app='myModule' >
     <div ng-controller='myController'> 
@@ -17,7 +17,7 @@
             Multicolumn sort
             </button>
     </center>
-            
+    <div ng-show="modalOpen" ng-include="'view/multiple-sort.html'"></div>        
     </div>
     <table>
         <thead>
@@ -40,7 +40,7 @@
    <br>   <br>
    <br>
    <br>
-        <div ng-show="modalOpen" ng-include="'view/multiple-sort.html'"></div>
+       
    
  </div> 
 
