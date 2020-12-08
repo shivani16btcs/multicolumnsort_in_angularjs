@@ -21,7 +21,6 @@ app.controller("myController", ($scope) => {
             $scope.modalOpen=!$scope.modalOpen;
         }
        
-        $scope.multiplesort=multiplesort;
         $scope.receivedData=multiplesort;
         $scope.sortColumn=[]
             $scope.receivedData.forEach((item, i)=>{
