@@ -20,7 +20,7 @@ app.controller("myController", ($scope) => {
         $scope.MultipleSort_Popup = function () {
             $scope.modalOpen=!$scope.modalOpen;
         }
-       
+        $scope.multiplesort=multiplesort;
         $scope.receivedData=multiplesort;
         $scope.sortColumn=[]
             $scope.receivedData.forEach((item, i)=>{
